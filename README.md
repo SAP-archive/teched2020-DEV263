@@ -1,4 +1,4 @@
-# Session ID - Session Title
+# DEV263 - Secure Cloud Applications by Default – Assisted Migration
 
 ## Description
 
