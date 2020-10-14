@@ -2,6 +2,8 @@
 
 In this exercise, we will create...
 
+https://github.wdf.sap.corp/CPSecurity/Knowledge-Base/blob/master/03_ApplicationSecurity/ClientLibraries.md
+
 ## Exercise 1.1 Sub Exercise 1 Description
 
 After completing these steps you will have created...
