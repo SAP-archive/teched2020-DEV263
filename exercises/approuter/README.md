@@ -1,26 +1,10 @@
-# Level 1 Heading
+# Exercise Approuter 1 - Check and Upgrade Java Security Libraries
 
-In this exercise, you will...
+## Exercise Approuter 1.1 Upgrade versions
+In case you use one of the following client-libaries:
 
-## Level 2 Heading
+- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
 
-After completing these steps you will have....
+Upgrade to the latest version.
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
-
-2.	Insert this code.
-```
- DATA(lt_params) = request->get_form_fields(  ).
- READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
-
-## Summary
-
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Consider [TODO: Release Notes]()
