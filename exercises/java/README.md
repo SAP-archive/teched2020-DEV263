@@ -1,6 +1,6 @@
-# Exercise 3 Check and Upgrade Java Security Libraries
+# Exercise 4 Check and Upgrade Java Security Libraries
 
-## Exercise 3.1 Upgrade versions
+## Exercise 4.1 Upgrade versions
 In case you use one of the following client-libaries:
 
 - *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
@@ -10,7 +10,7 @@ Upgrade to the latest version.
 
 Consider [Release Notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
 
-## Exercise Java 3.2 Check usage of deprecated container-security api library
+## Exercise Java 4.2 Check usage of deprecated container-security api library
 You make use of SAP-internal java-container-security library? 
 
 In that case continue to [Exercise Java 2: Migrate java-container-security library](../java/migrationguides/README.md)
