@@ -9,7 +9,7 @@ This repository contains the material for the SAP TechEd 2020 session called DEV
 This session introduces attendees to...
 
 ## Requirements
-The requirement to follow the migration exercises in this repository are to check whether you make use of one of these security libraries / versions. Only in these cases, an version upgrade / a migration is of relevance.
+The requirement to follow the exercises in this repository is to check whether you make use of one of these security libraries / versions. Only in these cases, a version upgrade / a migration is of relevance.
 
 ### Java Development
 - SAP internal *container-security api for Java* which was provided with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
@@ -31,7 +31,6 @@ The requirement to follow the migration exercises in this repository are to chec
 
 
 ## Exercises
-
 - [Approuter - Upgrade Version](exercises/approuter)
 - [Node.JS - Upgrade Version](exercises/nodejs)
 - [SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack)
@@ -69,9 +68,9 @@ With that the “uaa.user” scope and an additional roundtrip is not required a
 For NEW SCP subaccounts it can no longer be guaranteed, that “zone id” ==“subaccount id” == “tenant guid”. That’s why you must make sure, that you use the `getSubaccountId()` method only in case you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()`method as tenant discriminator (claim `zid`). Find further details and timelines on zone-enabling SCP subaccounts in CP Security Jam.
 
 ### Java-container-security Xsuaa client library is deprecated
-As of last week, Fortify reports a deprecation warning in case you still make use of SAP-internal java-container-security library. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides listed in CP Security Jam.
+As of last week, Fortify reports a deprecation warning in case you still make use of SAP-internal java-container-security library. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/java/migrationguides).
 
-https://jam4.sapjam.com/blogs/show/rOOEWKahgEU8aarmdVsy60?_lightbox=true
+[Release Notes](https://help.sap.com/viewer/12a72dd465d240d9bc4988ce6c691271/Cloud/en-US)
  
 ### SAP Java Buildpack and XSA Java Buildpack  
 As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 ( XSA PL 129), the Java runtime provides the java security library [maven central]. This is a fully compatible change, if you use Java Servlet Security only and the APIs provided by the Buildpack. Optionally you can leverage the latest API as announced with Release Note 2006A.
