@@ -9,8 +9,26 @@ This repository contains the material for the SAP TechEd 2020 session called Ses
 This session introduces attendees to...
 
 ## Requirements
+The requirement to follow the migration exercises in this repository are to check whether you make use of one of these security libraries / versions. Only in these cases, an version upgrade / a migration is of relevance.
 
-The requirements to follow the exercises in this repository are...
+### Java Development
+- SAP internal *container-security api for Java* which was provided with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
+- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
+- *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
+- [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security) < 2.7.5
+- *xs-user-holder* [maven central](https://search.maven.org/search?q=g:com.sap.cloud.sjb) < 1.17.5
+- *SAP Cloud SDK* [maven central](https://search.maven.org/search?q=g:com.sap.cloud.sdk) < 3.25.0
+- *SAP Java Buildpack* < 1.26
+- *XSA Java Buildpack* < 1.8.18 was released with XSA PL 129
+
+### Node.JS Development
+- *SAP container security api for Node.JS* [npm](https://www.npmjs.com/package/@sap/xssec) < 3.0.6
+- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
+
+### Python Development
+- *Python sap_xssec* < 2.1.0
+- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
+
 
 ## Exercises
 
