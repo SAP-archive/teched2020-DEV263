@@ -1,4 +1,4 @@
-# Exercise 2 - Check and Upgrade Node.JS Security Libraries
+# Exercise 2 Check and Upgrade Node.JS Security Libraries
 
 ## Exercise 2.1 Upgrade versions
 In case you use one of the following client-libaries:
