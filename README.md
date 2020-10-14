@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2020 session called Session ID - Session Title. 
+This repository contains the material for the SAP TechEd 2020 session called DEV263 - Session Title. 
 
 ## Overview
 
@@ -32,31 +32,51 @@ The requirement to follow the migration exercises in this repository are to chec
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+- [Approuter - Upgrade Version](exercises/approuter)
+- [Node.JS - Upgrade Version](exercises/nodejs)
+- [SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack)
+    - [Migration Guide to API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md)
+- [Java / Spring - Upgrade Version](exercises/java)
+    - [Migration Guides](exercises/java/migrationguides)
+    - [Migrate Java-container-security to spring-xsuaa](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/spring-xsuaa/Migration_JavaContainerSecurityProjects.md)
+    - [Migrate Java-container-security to java-security with adapter](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SpringSecurityProjects.md)
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+## Announcements
 
+### Security Vulnerabilities
+Please update to the latest security client library version in order to fix known security vulnerabilities.
+Before upgrade, note these general changes and in addition the library specific release notes, especially when upgrading major versions.
+ 
+### SAP_JWT_TRUST_ACL is obsolete
+It is no longer possible to use the `SAP_JWT_TRUST_ACL` parameter to specify a dedicated access control list (ACL) for JWT tokens. Changes also apply regarding the granting of security scopes, which are defined and granted in the application security descriptor (xs-security.json). For example, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor. For more information, see the release notes on Jam.
 
-**OR** Link to the PDF document stored in your github repo for example...
+**TODO**https://jam4.sapjam.com/blogs/show/oEdyQO183plBoQdrvcPw2w
 
-Start the exercises [here](exercises/myPDFDoc.pdf).
-    
-**OR** Link to the Tutorial Navigator for example...
+Communication Between Cloud Foundry Developments [DRAFT]
+https://github.wdf.sap.corp/pages/CPSecurity/Knowledge-Base/03_ApplicationSecurity/Syntax%20and%20Semantics%20of%20xs-security.json/ 
+https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html 
+https://blogs.sap.com/2020/09/03/outdated-sap_jwt_trust_acl/
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+ 
+### User Token is replaced with JWT Bearer Token Grant Type
+We want to inform you, that there is a replacement of UAA’s proprietary user token flow provided with the [JWT bearer token grant flow](https://docs.cloudfoundry.org/api/uaa/version/74.26.0/index.html#jwt-bearer-token-grant).
 
-**IMPORTANT**
+With that the “uaa.user” scope and an additional roundtrip is not required anymore. All client libs, that supports token exchange, makes use of the JWT bearer token grant flow. When using one the client libraries listed above to perform the token exchange, update to the latest version and you’re done. 
 
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+> Please note that JWT bearer token response provides NO refresh_token. This is no incompatible change, as it was never exposed via the API.
+ 
+### getSubaccountId vs. getIdentityZone vs. getZoneId
+For NEW SCP subaccounts it can no longer be guaranteed, that “zone id” ==“subaccount id” == “tenant guid”. That’s why you must make sure, that you use the `getSubaccountId()` method only in case you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()`method as tenant discriminator (claim `zid`). Find further details and timelines on zone-enabling SCP subaccounts in CP Security Jam.
+
+### Java-container-security Xsuaa client library is deprecated
+As of last week, Fortify reports a deprecation warning in case you still make use of SAP-internal java-container-security library. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides listed in CP Security Jam.
+
+https://jam4.sapjam.com/blogs/show/rOOEWKahgEU8aarmdVsy60?_lightbox=true
+ 
+### SAP Java Buildpack and XSA Java Buildpack  
+As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 ( XSA PL 129), the Java runtime provides the java security library [maven central]. This is a fully compatible change, if you use Java Servlet Security only and the APIs provided by the Buildpack. Optionally you can leverage the latest API as announced with Release Note 2006A.
 
 ## How to obtain support
-
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
