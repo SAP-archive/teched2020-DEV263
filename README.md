@@ -31,14 +31,15 @@ The requirement to follow the exercises in this repository is to check whether y
 
 
 ## Exercises
-- [Approuter - Upgrade Version](exercises/approuter)
-- [Node.JS - Upgrade Version](exercises/nodejs)
-- [SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack)
-    - [Migration Guide to API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md)
-- [Java / Spring - Upgrade Version](exercises/java)
-    - [Migration Guides](exercises/java/migrationguides)
-    - [Migrate Java-container-security to spring-xsuaa](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/spring-xsuaa/Migration_JavaContainerSecurityProjects.md)
-    - [Migrate Java-container-security to java-security with adapter](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SpringSecurityProjects.md)
+- [Exercise 1 Approuter - Upgrade Version](exercises/approuter)
+- [Exercise 2 Node.JS - Upgrade Version](exercises/nodejs)
+- [Exercise 3 SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack)
+    - [Exercise 3.2 Migration Guide to API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md)
+- [Exercise 4 Java / Spring - Upgrade Version](exercises/java)
+    - [Exercise 4.2 Migration Guides](exercises/java/migrationguides)
+      - [Migrate Java-container-security to spring-xsuaa](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/spring-xsuaa/Migration_JavaContainerSecurityProjects.md)
+      - [Migrate Java-container-security to java-security with adapter](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SpringSecurityProjects.md)
+- [Exercise 5 SAP_JWT_TRUST_ACL](exercises/sap_jwt_trust_acl)
 
 ## Announcements
 
@@ -48,14 +49,6 @@ Before upgrade, note these general changes and in addition the library specific 
  
 ### SAP_JWT_TRUST_ACL is obsolete
 It is no longer possible to use the `SAP_JWT_TRUST_ACL` parameter to specify a dedicated access control list (ACL) for JWT tokens. Changes also apply regarding the granting of security scopes, which are defined and granted in the application security descriptor (xs-security.json). For example, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor. For more information, see the release notes on Jam.
-
-**TODO**https://jam4.sapjam.com/blogs/show/oEdyQO183plBoQdrvcPw2w
-
-Communication Between Cloud Foundry Developments [DRAFT]
-https://github.wdf.sap.corp/pages/CPSecurity/Knowledge-Base/03_ApplicationSecurity/Syntax%20and%20Semantics%20of%20xs-security.json/ 
-https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html 
-https://blogs.sap.com/2020/09/03/outdated-sap_jwt_trust_acl/
-
  
 ### User Token is replaced with JWT Bearer Token Grant Type
 We want to inform you, that there is a replacement of UAA’s proprietary user token flow provided with the [JWT bearer token grant flow](https://docs.cloudfoundry.org/api/uaa/version/74.26.0/index.html#jwt-bearer-token-grant).
