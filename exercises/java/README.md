@@ -1,42 +1,22 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise Java 1 - Check and Upgrade Java Security Libraries
 
-https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5af489d4cfd54b0790a02e9f1425d57d.html
+## Exercise Java 1.1 Upgrade versions
+In case you use one of the following client-libaries:
 
-## Exercise 2.1 Sub Exercise 1 Description
+- *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
+- [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security) < 2.7.5
 
-After completing these steps you will have created...
+Upgrade to the latest version.
 
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
+Consider [Release Notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ).
-```
+## Exercise Java 1.2 Check usage of deprecated container-security api library
+You make use of SAP-internal java-container-security library? 
 
+In that case continue to [Exercise Java 2: Migrate java-container-security library](../java/migrationguides/README.md)
 
 
-## Exercise 2.2 Sub Exercise 2 Description
+## Further References
+- [Authentication for Java Resource Servers](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5af489d4cfd54b0790a02e9f1425d57d.html)
+- https://github.com/sap-staging/cloud-authorization-client-library-java/tree/dcl-client-mockmwc-w-policies/samples/spring-security-cas-oauth2client#clone-repository-and-install-cas-client-libraries
 
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
-
-## Summary
-
-You've now ...
-
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
