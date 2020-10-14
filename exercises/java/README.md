@@ -1,4 +1,4 @@
-# Exercise 3 - Java: Check and Upgrade Java Security Libraries
+# Exercise 3 Check and Upgrade Java Security Libraries
 
 ## Exercise 3.1 Upgrade versions
 In case you use one of the following client-libaries:
