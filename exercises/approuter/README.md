@@ -1,4 +1,4 @@
-# Exercise Approuter 1 - Check and Upgrade Version
+# Exercise 1 Check and Upgrade Approuter Version
 
 ## Exercise Approuter 1.1 Upgrade versions
 In case you use one of the following client-libaries:
