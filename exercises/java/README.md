@@ -1,6 +1,6 @@
 # Exercise 2 - Exercise 2 Description
 
-In this exercise, we will create...
+https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5af489d4cfd54b0790a02e9f1425d57d.html
 
 ## Exercise 2.1 Sub Exercise 1 Description
 
@@ -11,7 +11,7 @@ After completing these steps you will have created...
 
 2.	Insert this line of code.
 ```abap
-response->set_text( |Hello ABAP World! | ). 
+response->set_text( |Hello ABAP World! | ).
 ```
 
 
