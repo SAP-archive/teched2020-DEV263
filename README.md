@@ -49,6 +49,8 @@ Before upgrade, note these general changes and in addition the library specific 
  
 ### SAP_JWT_TRUST_ACL is obsolete
 It is no longer possible to use the `SAP_JWT_TRUST_ACL` parameter to specify a dedicated access control list (ACL) for JWT tokens. Changes also apply regarding the granting of security scopes, which are defined and granted in the application security descriptor (xs-security.json). For example, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor. For more information, see the release notes on Jam.
+
+[TODO Release Note]()
  
 ### User Token is replaced with JWT Bearer Token Grant Type
 We want to inform you, that there is a replacement of UAA’s proprietary user token flow provided with the [JWT bearer token grant flow](https://docs.cloudfoundry.org/api/uaa/version/74.26.0/index.html#jwt-bearer-token-grant).
@@ -60,13 +62,18 @@ With that the “uaa.user” scope and an additional roundtrip is not required a
 ### getSubaccountId vs. getIdentityZone vs. getZoneId
 For NEW SCP subaccounts it can no longer be guaranteed, that “zone id” ==“subaccount id” == “tenant guid”. That’s why you must make sure, that you use the `getSubaccountId()` method only in case you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()`method as tenant discriminator (claim `zid`). Find further details and timelines on zone-enabling SCP subaccounts in CP Security Jam.
 
+[TODO Release Note]()
+
 ### Java-container-security Xsuaa client library is deprecated
 As of last week, Fortify reports a deprecation warning in case you still make use of SAP-internal java-container-security library. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/java/migrationguides).
 
-[Release Notes](https://help.sap.com/viewer/12a72dd465d240d9bc4988ce6c691271/Cloud/en-US)
+[Release Note](https://help.sap.com/viewer/12a72dd465d240d9bc4988ce6c691271/Cloud/en-US)
  
 ### SAP Java Buildpack and XSA Java Buildpack  
 As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 ( XSA PL 129), the Java runtime provides the java security library [maven central]. This is a fully compatible change, if you use Java Servlet Security only and the APIs provided by the Buildpack. Optionally you can leverage the latest API as announced with Release Note 2006A.
+
+[TODO SAP Java Buildpack Release Note]()
+[TODO XSA Java Buildpack Release Note]()
 
 ## How to obtain support
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
