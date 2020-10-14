@@ -1,6 +1,6 @@
-# Exercise 2 - Node.JS: Check and Upgrade Version
+# Exercise 2 - Check and Upgrade Node.JS Security Libraries
 
-## Exercise 2.1: Upgrade versions
+## Exercise 2.1 Upgrade versions
 In case you use one of the following client-libaries:
 
 - *SAP container security api for Node.JS* [npm](https://www.npmjs.com/package/@sap/xssec) < 3.0.6
