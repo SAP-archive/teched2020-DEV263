@@ -13,7 +13,7 @@ Consider [Release Notes](https://github.com/SAP/cloud-security-xsuaa-integration
 ## Exercise Java 4.2 Check usage of deprecated container-security api library
 You make use of SAP-internal java-container-security library? 
 
-In that case continue to [Exercise Java 2: Migrate java-container-security library](../java/migrationguides/README.md)
+In that case continue to [Exercise 4.2: Migrate java-container-security library](../java/migrationguides/README.md)
 
 
 ## Further References
