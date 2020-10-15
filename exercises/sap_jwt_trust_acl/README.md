@@ -1,47 +1,76 @@
-# SAP_JWT_TRUST_ACL is obsolete
-It is no longer possible to use the `SAP_JWT_TRUST_ACL` parameter to specify a dedicated access control list (ACL) for JWT tokens. Changes also apply regarding the granting of security scopes, which are defined and granted in the application security descriptor (xs-security.json). For example, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor. For more information, see the release notes on Jam.
+# Exercise 5 Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL
 
-**TODO**https://jam4.sapjam.com/blogs/show/oEdyQO183plBoQdrvcPw2w
+This exercise is only relevant for communications between applications / services with or without principal propagation.
 
-Communication Between Cloud Foundry Developments [DRAFT]
-https://github.wdf.sap.corp/pages/CPSecurity/Knowledge-Base/03_ApplicationSecurity/Syntax%20and%20Semantics%20of%20xs-security.json/
-https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html
-https://blogs.sap.com/2020/09/03/outdated-sap_jwt_trust_acl/
+An operator has no longer to maintain the environment parameter SAP_JWT_TRUST_ACL with landscape specific values as part of the deployment descriptor (e.g. manifest.yml).
 
+Instead, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor.
 
-## Exercise 1.1 Sub Exercise 1 Description
+## Exercise 5.1 Check Prerequisites
+So, Service/Application B can get rid of SAP_JWT_TRUST_ACL environment variable, when using one of these client library versions:
 
-After completing these steps you will have created...
+- java-security >= 2.7.5
+- spring-xsuaa
+- container security api for node.js >= 3.0.6
+- approuter >= 8.x
+- sap_xssec for Python >= 2.1.0 
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+## Exercise 5.2 Fix Security Issue
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ).
+With introduction of Audience Validation as replacement for SAP_JWT_TRUST_ACL, bypassing trust is no longer accepted. That means in case you make use of wildcards ``*``, e.g.
+ ```yml
+env:
+  SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]
 ```
 
+ the next steps are mandatory.
+ 
+### Step 1 Grant scope(s) to calling app
+For a business application A that wants to call an application B, it's now mandatory that the application /service B grants at least one scope to the calling business application A. 
+You can grant scopes with the `xs-security.json` file. 
 
-
-## Exercise 1.2 Sub Exercise 2 Description
-
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-
+#### Communication with User principal
+```
+"scopes": [
+	{
+		"name"                 : "$XSAPPNAME.Read",
+		"description"          : "read",
+		"granted-apps"         : ["$XSAPPNAME(application,appa)" ] 
+	}
+]
 ```
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+#### Communication with User principal
+```
+"scopes": [
+	{
+		"name"                 : "$XSAPPNAME.Read",
+		"description"          : "read",
+		"grant-as-authority-to-apps" : ["$XSAPPNAME(application,appa)"]
+	}
+]
+```
 
+For additional information, refer to the [Application Security Descriptor Configuration Syntax](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html), specifically the sections [referencing the application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_fm2_wsk_pdb) and [authorities](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_d1m_1nq_zy). 
+
+### Step 2 Accept scopes
+Furthermore, the application A has to accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
+
+#### Communication with User principal
+```
+"foreign-scope-references": ["$ACCEPT_GRANTED_SCOPES"],       
+```
+You can limit the references to just those applications you want to accept. For example, `"foreign-scope-references": ["$XSAPPNAME(application,servb).Read"]`.
+
+#### Communication without User principal
+```
+{
+    "xsappname"     : "appa",
+    "tenant-mode"   : "shared",
+    "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
+}
+```
+You can limit the references to just those applications you want to accept. For example, `"authorities":["$XSAPPNAME(application,servb).Create"]`.
 
 ## Summary
 

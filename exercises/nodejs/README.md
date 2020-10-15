@@ -8,23 +8,10 @@ In case you use one of the following client-libaries:
 
 Upgrade to the latest version.
 
-Consider [TODO: Release Notes]()
+Consider [TODO: Release Notes](https://github.wdf.sap.corp/CPSecurity/node-xs2sec/releases)
 
-## Exercise 2.2 Sub Exercise 1 Description
+## Tips
+- Get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/xssec versions`
 
-After completing these steps you will have created...
-
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
-
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
-
-## Summary
-
-You've now ...
-
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
-
+## Further References
+- [Authentication for Node.js Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4902b6e66cbd42648b5d9eaddc6a363d.html)

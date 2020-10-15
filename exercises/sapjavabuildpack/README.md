@@ -10,9 +10,12 @@ In general, the APIs are kept compatible so we do not expect any incompatibiliti
 
 https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md
 
+## Leverage BOM
+TODO
+
 ## Summary
 
-You've now ...
+You've now cleaned up dependencies to a deprecated library.
 
 Continue to - [SAP_JWT_TRUST_ACL](../sap_jwt_trust_acl/README.md)
 
