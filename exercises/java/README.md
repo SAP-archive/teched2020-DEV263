@@ -38,7 +38,7 @@ In that case continue to [Exercise 4.2 Migrate java-container-security library](
 
 You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Java*, which is deprecated and has to be replaced.
 
-Continue to - [SAP_JWT_TRUST_ACL](../sap_jwt_trust_acl/README.md)
+Continue to - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
 
 
 ## Further References
