@@ -10,6 +10,12 @@ Upgrade to the latest version.
 
 Consider [TODO: Release Notes](https://github.wdf.sap.corp/CPSecurity/node-xs2sec/releases)
 
+## Summary
+
+You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Node.js*, which is deprecated and has to be replaced.
+
+Continue to - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
+
 ## Tips
 - Get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/xssec versions`
 
