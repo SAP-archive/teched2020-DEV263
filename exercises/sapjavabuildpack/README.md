@@ -11,7 +11,9 @@ In general, the APIs are kept compatible so we do not expect any incompatibiliti
 https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md
 
 ## Leverage BOM
-TODO
+The versions of the SAP Java buildpack dependencies and the provided APIs from supported runtime containers, could be consumed through a Bill Of Materials (BOM). The BOM can be used to control the versions of a project’s dependencies.
+
+https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6c6936e8e4ea40c9a9a69f6783b1e978.html
 
 ## Summary
 
