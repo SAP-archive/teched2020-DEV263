@@ -8,7 +8,7 @@ In case you use one of the following client-libaries:
 
 Upgrade to the latest version.
 
-Consider [TODO: Release Notes](https://github.wdf.sap.corp/CPSecurity/node-xs2sec/releases)
+Consider the CHANGELOG.md in `node_modules/@sap/xssec`.
 
 ## Summary
 
