@@ -12,7 +12,7 @@ Upgrade to the latest version.
 
 Consider [Release Notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
 
-## Exercise Java 4.2 Check usage of deprecated container-security api library
+## Exercise 4.2 Check usage of deprecated container-security api library
 
 The table below gives you an overview about the dependencies that needs to be replaced by the open-source version.
 
