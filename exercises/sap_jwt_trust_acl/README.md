@@ -72,8 +72,12 @@ You can limit the references to just those applications you want to accept. For 
 ```
 You can limit the references to just those applications you want to accept. For example, `"authorities":["$XSAPPNAME(application,servb).Create"]`.
 
+## Exercise 5.3 Re-deploy and test your application
+
+TODO
+
 ## Summary
 
-You've now ...
+Having done that, you do not longer need to manage your `SAP_JWT_TRUST_ACL` environment specific and you do not longer accept any token from foreign applications.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to the last exercise, [Exercise 6](/exercises/zone_enablement), in order to prepare your application for Zone-Enabled Subaccounts.
