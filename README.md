@@ -67,16 +67,16 @@ As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.
 
 
 ## Exercises
-- [Exercise 1 Approuter - Upgrade Version](exercises/approuter)
-- [Exercise 2 Node.JS - Upgrade Version](exercises/nodejs)
-- [Exercise 3 SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack)
+- [Exercise 1 Approuter - Upgrade Security Client Lib Version](exercises/approuter)
+- [Exercise 2 Node.JS - Upgrade Security Client Lib Version](exercises/nodejs)
+- [Exercise 3 SAP Java Buildpack and XSA Java Buildpack - Adapt Dependencies](exercises/sapjavabuildpack)
     - [Exercise 3.2 Migration Guide to API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md)
-- [Exercise 4 Java / Spring - Upgrade Version](exercises/java)
+- [Exercise 4 Java / Spring - Upgrade Security Client Lib Version](exercises/java)
     - [Exercise 4.2 Migration Guides](exercises/java/migrationguides)
       - [Migrate Java-container-security to spring-xsuaa](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/spring-xsuaa/Migration_JavaContainerSecurityProjects.md)
       - [Migrate Java-container-security to java-security with adapter](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SpringSecurityProjects.md)
 - [Exercise 5 SAP_JWT_TRUST_ACL](exercises/sap_jwt_trust_acl)
-- [Exercise 6 Prepare for zone-enabled Subaccounts](exercises/zone_enablement)
+- [Exercise 6 Prepare for Zone-Enabled Subaccounts](exercises/zone_enablement)
 
 
 ## How to obtain support
