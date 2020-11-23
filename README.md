@@ -38,7 +38,7 @@ Before upgrade, note these general changes and in addition the library specific 
 ### SAP_JWT_TRUST_ACL is obsolete
 It is no longer possible to use the `SAP_JWT_TRUST_ACL` parameter to specify a dedicated access control list (ACL) for JWT tokens. Changes also apply regarding the granting of security scopes, which are defined and granted in the application security descriptor (xs-security.json). For example, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor. For more information, have a look at [Exercise 5 SAP_JWT_TRUST_ACL](exercises/sap_jwt_trust_acl).
 
-[Release Note, September 24th 2020](https://help.sap.com/viewer/12a72dd465d240d9bc4988ce6c691271/Cloud/en-US)
+[Release Note, September 24th 2020](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Authorization%20and%20Trust%20Management&date=all&from=2020-09-24&to=2020-09-24)
  
 ### User Token is replaced with JWT Bearer Token Grant Type
 We want to inform you, that there is a replacement of UAA’s proprietary user token flow provided with the [JWT bearer token grant flow](https://docs.cloudfoundry.org/api/uaa/version/74.26.0/index.html#jwt-bearer-token-grant).
