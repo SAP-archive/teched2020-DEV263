@@ -61,9 +61,9 @@ As of last week, Fortify reports a deprecation warning in case you still make us
 ### SAP Java Buildpack and XSA Java Buildpack  
 As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 ( XSA PL 129), the Java runtime provides the [java security library apis](https://github.com/SAP/cloud-security-xsuaa-integration) that are availble on maven central. This is a fully compatible change, if you use Java Servlet Security only and the APIs provided by the Buildpack. Optionally you can leverage the latest API as announced with the Release Notes. For more information, have a look at [Exercise 3 SAP Java Buildpack and XSA Java Buildpack - Upgrade Version](exercises/sapjavabuildpack).
 
-[TODO SAP Java Buildpack Release Note, Version 1.26.1]()  
-[SAP HANA Platform SPS 03 release note](https://launchpad.support.sap.com/#/notes/2551355)  
-[SAP HANA Platform SPS 04 release note](https://launchpad.support.sap.com/#/notes/2656575)  
+[SAP Java Buildpack, Version 1.26.1 - Release Note, 2 July 2020](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2020-07-02&to=2020-07-02)  
+[SAP HANA Platform SPS 03 Release Note](https://launchpad.support.sap.com/#/notes/2551355)  
+[SAP HANA Platform SPS 04 Release Note](https://launchpad.support.sap.com/#/notes/2656575)  
 
 
 ## Exercises
