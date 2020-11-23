@@ -1,6 +1,6 @@
 # Exercise 4 Check and Upgrade Java Security Libraries
 
-> **Note** This is not relevant for applications that make use of Java Web security provided by SAP Java Buildpack (as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack)).
+> **Note** This is NOT relevant for applications that make use of Java Web security provided by SAP Java Buildpack (as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack)).
 
 ## Exercise 4.1 Upgrade versions
 In case you use one of the following client-libaries:
