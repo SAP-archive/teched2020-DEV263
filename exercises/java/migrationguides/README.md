@@ -26,6 +26,6 @@ For J2EE applications the recommended replacement would be the SAP Java Buildpac
 
 ## Summary
 
-You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Java*, which is deprecated and has to be replaced.
+You've successfully removed the dependency to the SAP internal *container-security api for Java*, which is deprecated and you have successfully replaced it with the open-source security client libary, which is available on maven central.
 
 Continue to - [SAP_JWT_TRUST_ACL](../sap_jwt_trust_acl/README.md)
