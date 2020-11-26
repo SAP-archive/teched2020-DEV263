@@ -1,4 +1,4 @@
-# Exercise 6 Prepare your application for zone-enabled subaccounts
+# Exercise 6 Prepare your application for new subaccounts
 For NEW SCP subaccounts it can no longer be guaranteed, that “zone id” ==“subaccount id” == “tenant guid”. That’s why you have to make sure, that you use the `getSubaccountId()` method only in case you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()`method as tenant discriminator (claim `zid`).
 
 
@@ -12,4 +12,4 @@ For each occurence of `getSubaccountId()` method, check whether you required tha
 
 ## Summary
 
-You've now succesfully prepared your application for zone-enabled subaccounts and you've reached the end of the exercises!
+You've now succesfully prepared your application for new subaccounts where the tenant guid differs from the subaccount id and you've reached the end of the exercises!
