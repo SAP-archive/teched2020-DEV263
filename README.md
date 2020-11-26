@@ -6,7 +6,11 @@ This repository contains the material for the SAP TechEd 2020 session called DEV
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees how to upgrade to the newest security client libraries of SAP.
+With these exercises you will learn how to upgrade to the newest libraries and how to make sure your web application work with the new features like the obsolete SAP_JWT_TRUST_ACL and the preparation if Zone-Enabled Subaccounts.
+
+If you don’t have a running webapplication secured by the SAP security client libraries then you may want to have a look *here*.
+But this course is meant for helping existing application to upgrade to the newest versions of the client libraries.
 
 ## Requirements
 The requirement to follow the exercises in this repository is to check whether you make use of one of these security libraries / versions. Only in these cases, a version upgrade / a migration is of relevance.
