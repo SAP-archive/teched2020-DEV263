@@ -10,6 +10,18 @@ Upgrade to the latest version.
 
 Consider the CHANGELOG.md in `node_modules/@sap/xssec`.
 
+### If you upgrade from version 2.x.x
+For most users the @sap/xssec 3.x.x library is backward compatible to the 2.x.x versions. Especially if you only use the documented methods you are safe.
+But if you eg. use member attributes of the SecurityContext directly without getting them with the documented getter function, than you have to know, that these attributes are now "private" and only available using the documented getter method.
+
+For example:
+```js
+  var token = userContext.token; //will be undefined in version 3.x.x
+  
+  //instead use the documented way:
+  var token = userContext.getAppToken();
+```
+
 ## Summary
 
 You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Node.js*, which is deprecated and has to be replaced.
