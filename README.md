@@ -48,6 +48,8 @@ With that the “uaa.user” scope and an additional roundtrip is not required a
 > Please note that JWT bearer token response provides NO refresh_token. This is no incompatible change, as it was never exposed via the API.
  
 ### getSubaccountId vs. getIdentityZone vs. getZoneId
+In order to prepare for the possibility to decouple subaccount (metering) and the XSUAA tenant (zone id), we explicitly added `getZoneId()` next to `getSubaccountId()`.
+ 
 For NEW SCP subaccounts it can no longer be guaranteed, that “zone id” ==“subaccount id” == “tenant guid”. That’s why you must make sure, that you use the `getSubaccountId()` method only in case you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()`method as tenant discriminator (claim `zid`). For more information, have a look at [Exercise 6 Prepare for zone-enabled Subaccounts](exercises/zone_enablement).
 
 [TODO Release Note]()
