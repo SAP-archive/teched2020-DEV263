@@ -17,9 +17,10 @@ https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6c6936e
 TODO explain (blocked by [this](https://github.com/SAP/cloud-security-xsuaa-integration/issues/400))
 A sample can be found here: https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/samples/sap-java-buildpack-api-usage
 
-## Exercise 1.3  Re-Deploy and test your application
+## Exercise 1.3  Deploy and test your approuter
 
-TODO
+To check whether your upgrade had no undesired side-effects, deploy your approuter to Cloud Foundry and test.
+
 
 ## Summary
 
