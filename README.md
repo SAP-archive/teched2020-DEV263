@@ -14,22 +14,18 @@ This course is mainly targeted to application developers that must be upgrade th
 Check whether you make use of one of these libraries / versions to secure your application.
 
 #### Java development
-- SAP internal *container-security api for Java* which was provided with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
-- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
-- *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
-- [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security) < 2.7.5
-- *xs-user-holder* [maven central](https://search.maven.org/search?q=g:com.sap.cloud.sjb) < 1.17.5
-- *SAP Cloud SDK* [maven central](https://search.maven.org/search?q=g:com.sap.cloud.sdk) < 3.25.0
+- SAP internal *container-security api for Java* which was provided for example with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
+- *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa)) < 2.7.3
+- [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.security)) < 2.7.5
+- *xs-user-holder* ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.sjb)) < 1.17.5
+- *SAP Cloud SDK* ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.sdk)) < 3.25.0
 - *SAP Java Buildpack* < 1.26
-- *XSA Java Buildpack* < 1.8.18 was released with XSA PL 129
+- *XSA Java Buildpack* < 1.8.18
+- *approuter* ([npm](https://www.npmjs.com/package/@sap/approuter)) < 8.5
 
 #### Node.JS development
-- *SAP container security api for Node.JS* [npm](https://www.npmjs.com/package/@sap/xssec) < 3.0.6
-- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
-
-#### Python development
-- *Python sap_xssec* < 2.1.0
-- *approuter* [npm](https://www.npmjs.com/package/@sap/approuter) < 8.5
+- *SAP container security api for Node.JS* ([npm](https://www.npmjs.com/package/@sap/xssec)) < 3.0.6
+- *approuter* ([npm](https://www.npmjs.com/package/@sap/approuter)) < 8.5
 
 ## Before you start
 Before upgrade, review these general changes and the library specific release notes, especially if you want to upgrade major versions.
@@ -63,7 +59,7 @@ As of begin of July, SAP-internal java-container-security library is deprecated.
 
  
 ### SAP Java Buildpack and XSA Java Buildpack  
-As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 ( XSA PL 129), the Java runtime provides the [java security library apis](https://github.com/SAP/cloud-security-xsuaa-integration) that are available on maven central. This is a fully compatible change if you use Java Servlet Security only and the APIs provided by the buildpack. Optionally you can leverage the latest API as announced with the release notes. 
+As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.18 (XSA PL 129), the Java runtime provides the [java security library apis](https://github.com/SAP/cloud-security-xsuaa-integration) that are available on maven central. This is a fully compatible change if you use Java Servlet Security only and the APIs provided by the buildpack. Optionally you can leverage the latest API as announced with the release notes. 
 
 [SAP Java Buildpack, Version 1.26.1 - Release note, 2 July 2020](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2020-07-02&to=2020-07-02)  
 [SAP HANA Platform SPS 03 Release note](https://launchpad.support.sap.com/#/notes/2551355)  
