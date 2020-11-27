@@ -13,7 +13,6 @@ In general, the APIs are kept compatible. For this reason we do not expect any i
 ## Exercise 3.2 Leverage BOM
 The versions of the SAP Java buildpack dependencies and the provided APIs from supported runtime containers, could be consumed through a Bill of Materials (BOM). Use the BOM to control the versions of a project’s dependencies as described [here on help.sap.com](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6c6936e8e4ea40c9a9a69f6783b1e978.html). 
 
-A sample can be found here: https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/samples/sap-java-buildpack-api-usage
 
 ## Exercise 3.3 Deploy and test your application
 
@@ -29,3 +28,8 @@ Continue with - [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUS
 Or
 
 [OPTIONAL] Continue with - [Exercise 3.2 Migration Guide to API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md).
+
+
+## Further references
+- [Configuring Authentication for SAP Java Buildpacks](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ead7ee64f96f4c42bacbf0ae23d4135b.html)
+- [Sample](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/samples/sap-java-buildpack-api-usage)
