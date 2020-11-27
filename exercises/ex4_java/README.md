@@ -34,6 +34,8 @@ com.sap.security.nw.sso.linuxx86_64.opt | sapjwt.linuxx86_64 | ./. | ./.
 com.sap.security.nw.sso.linuxppc64.opt | sapjwt.linuxppc64 | ./. | ./. 
 com.sap.security.nw.sso.darwinintel64.opt | sapjwt.darwinintel64 | ./. | ./. 
 
+In that case continue  with [Exercise 4.3 - Migrate java-container-security library](migrationguides/README.md).
+
 ## Summary
 
 You've now upgraded the version. 
