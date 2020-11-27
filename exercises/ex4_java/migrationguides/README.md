@@ -1,4 +1,4 @@
-# Exercise 4 Migrate java-container-security library
+# Exercise 4 - Migrate java-container-security library
 
 The java-container-security` client depends on [Spring Security OAuth](https://projects.spring.io/spring-security-oauth), which has been put to maintenance with Spring 5. [Similar functionality](https://spring.io/projects/spring-security-oauth) is now integrated in Spring Security ([communication from 2018](https://spring.io/blog/2018/01/30/next-generation-oauth-2-0-support-with-spring-security): "After Spring Security has reached feature parity with Spring Security OAuth, we will continue to support bugs and security fixes for at least one year.")
 
@@ -28,4 +28,4 @@ For J2EE applications the recommended replacement would be the SAP Java Buildpac
 
 You've successfully removed the dependency to the SAP internal *container-security api for Java*, which is deprecated and you have successfully replaced it with the open-source security client libary, which is available on maven central.
 
-Continue to - [SAP_JWT_TRUST_ACL](../sap_jwt_trust_acl/README.md)
+Continue with - [SAP_JWT_TRUST_ACL](../sap_jwt_trust_acl/README.md)

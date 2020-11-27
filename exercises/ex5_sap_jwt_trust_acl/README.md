@@ -1,10 +1,10 @@
-# Exercise 5 Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL
+# Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL
 
 This exercise is only relevant for communications between applications / services with or without principal propagation.
 
 An operator has no longer to maintain the environment parameter SAP_JWT_TRUST_ACL with landscape specific values as part of the deployment descriptor (e.g. manifest.yml).
 
-Instead, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A has to accept these granted scopes or authorities as part of the application security descriptor.
+Instead, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A must accept these granted scopes or authorities as part of the application security descriptor.
 
 ## Exercise 5.1 Check Prerequisites
 So, Service/Application B can get rid of SAP_JWT_TRUST_ACL environment variable, when using one of these client library versions:
@@ -54,7 +54,7 @@ You can grant scopes with the `xs-security.json` file.
 For additional information, refer to the [Application Security Descriptor Configuration Syntax](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html), specifically the sections [referencing the application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_fm2_wsk_pdb) and [authorities](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_d1m_1nq_zy). 
 
 ### Step 2 Accept scopes
-Furthermore, the application A has to accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
+Furthermore, the application A must accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
 
 #### Communication with User principal
 ```
@@ -80,4 +80,4 @@ TODO
 
 Having done that, you do not longer need to manage your `SAP_JWT_TRUST_ACL` environment specific and you do not longer accept any token from foreign applications.
 
-Continue to the last exercise, [Exercise 6](/exercises/zone_enablement), in order to prepare your application for Zone-Enabled Subaccounts.
+Continue with the last exercise, [Exercise 6](/exercises/zone_enablement), in order to prepare your application for Zone-Enabled Subaccounts.

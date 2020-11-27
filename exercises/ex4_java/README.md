@@ -1,16 +1,16 @@
-# Exercise 4 Check and Upgrade Java Security Libraries
+# Exercise 4 - Check and Upgrade Java Security Libraries
 
 > **Note** This is NOT relevant for applications that make use of Java Web security provided by SAP Java Buildpack (as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack)).
 
 ## Exercise 4.1 Upgrade versions
-In case you use one of the following client-libaries:
+When you are using one of the following client-libaries:
 
 - *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
 - [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security) < 2.7.5
 
 Upgrade to the latest version.
 
-Consider [Release Notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
+Consider [Release notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
 
 ## Exercise 4.2 Check usage of deprecated container-security api library
 
@@ -36,10 +36,10 @@ In that case continue to [Exercise 4.2 Migrate java-container-security library](
 
 ## Summary
 
-You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Java*, which is deprecated and has to be replaced.
+You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Java*, which is deprecated and must be replaced.
 
-Continue to - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
+Continue with - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
 
 
-## Further References
+## Further references
 - [Authentication for Java Resource Servers](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5af489d4cfd54b0790a02e9f1425d57d.html)
