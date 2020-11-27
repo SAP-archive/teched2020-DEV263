@@ -8,9 +8,6 @@ This repository contains the material for the SAP TechEd 2020 session called DEV
 
 The exercises provides a step-by-step guide on how to upgrade to the latest cloud security client libraries of SAP. This course is mainly targeted to application developers that needs to upgrade their existing application to be up-to-date and ready for upcoming features.
 
-TODO: If you don’t have a running web application secured by the SAP security client libraries then you may want to have a look *here*.
-
-
 ## Requirements
 The requirement to follow the exercises in this repository is to check whether you make use of one of these security libraries / versions. Only in these cases, a version upgrade / a migration is of relevance.
 
