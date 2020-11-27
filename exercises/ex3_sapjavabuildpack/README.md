@@ -11,9 +11,7 @@ In general, the APIs are kept compatible. For this reason we do not expect any i
 
 
 ## Exercise 3.2 Leverage BOM
-The versions of the SAP Java buildpack dependencies and the provided APIs from supported runtime containers, could be consumed through a Bill of Materials (BOM). Use the BOM to control the versions of a project’s dependencies.
-
-https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6c6936e8e4ea40c9a9a69f6783b1e978.html
+The versions of the SAP Java buildpack dependencies and the provided APIs from supported runtime containers, could be consumed through a Bill of Materials (BOM). Use the BOM to control the versions of a project’s dependencies as described [here on help.sap.com](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6c6936e8e4ea40c9a9a69f6783b1e978.html). 
 
 A sample can be found here: https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/samples/sap-java-buildpack-api-usage
 
