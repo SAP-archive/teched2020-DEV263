@@ -8,7 +8,7 @@ This repository contains the material for the SAP TechEd 2020 session called DEV
 
 This session walks the attendees through the process of upgrading the client libraries and migrating to them. 
 
-This course is mainly targeted to application developers that needs to upgrade their existing application to be up-to-date and ready for upcoming features.
+This course is mainly targeted to application developers that must be upgrade their existing application to be up-to-date and ready for upcoming features.
 
 ## Prerequisites
 Check whether you make use of one of these security libraries / versions.
@@ -57,7 +57,7 @@ For NEW SAP Cloud Platform subaccounts, it can no longer be guaranteed that “z
 
 
 ### Java-container-security Xsuaa client library is deprecated
-As of begin of July, SAP-internal java-container-security library is deprecated. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/java/migrationguides).
+As of begin of July, SAP-internal java-container-security library is deprecated. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/ex4_java/migrationguides).
 
 [Release note, July 2nd 2020](https://help.sap.com/viewer/12a72dd465d240d9bc4988ce6c691271/Cloud/en-US)
 
@@ -71,12 +71,12 @@ As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.
 
 
 ## Exercises
-- [Exercise 1 Approuter - Upgrade Security Client Lib Version](exercises/approuter)
-- [Exercise 2 Node.JS - Upgrade Security Client Lib Version](exercises/nodejs)
-- [Exercise 3 SAP Java Buildpack and XSA Java Buildpack - Adapt Dependencies](exercises/sapjavabuildpack)
-- [Exercise 4 Java / Spring - Upgrade Security Client Lib Version](exercises/java)
-- [Exercise 5 SAP_JWT_TRUST_ACL](exercises/sap_jwt_trust_acl)
-- [Exercise 6 Prepare for New Subaccounts](exercises/zone_enablement)
+- [Exercise 1 - Check and upgrade approuter version](exercises/ex1_approuter)
+- [Exercise 2 - Check and upgrade Node.JS security libraries](exercises/ex2_nodejs)
+- [Exercise 3 - Check and upgrade SAP Java Buildpack and XSA Java Buildpack](exercises/ex3_sapjavabuildpack)
+- [Exercise 4 - Check and upgrade Java/Spring security libraries](exercises/ex4_java)
+- [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL](exercises/ex5_sap_jwt_trust_acl)
+- [Exercise 6 - Prepare your application for new subaccounts](exercises/ex6_tenantid)
 
 
 ## How to obtain support

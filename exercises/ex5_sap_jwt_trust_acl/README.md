@@ -1,13 +1,13 @@
 # Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL
 
-This exercise is only relevant for communications between applications / services with or without principal propagation.
+This exercise is only relevant for communications between applications and/or services.
 
-An operator has no longer to maintain the environment parameter SAP_JWT_TRUST_ACL with landscape specific values as part of the deployment descriptor (e.g. manifest.yml).
+An operator needs no longer to maintain the ``SAP_JWT_TRUST_ACL`` environment variable with landscape specific values as part of the deployment descriptor (e.g. ``manifest.yml``).
 
-Instead, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore business application A must accept these granted scopes or authorities as part of the application security descriptor.
+Instead, if a business application A wants to call an application B, it is now mandatory that application B grants at least one scope to the calling business application A. Furthermore, business application A must accept these granted scopes or authorities as part of the application security descriptor.
 
-## Exercise 5.1 Check Prerequisites
-So, Service/Application B can get rid of SAP_JWT_TRUST_ACL environment variable, when using one of these client library versions:
+## Exercise 5.1 Check prerequisites
+So, Service/application B can get rid of ``SAP_JWT_TRUST_ACL`` environment variable, when using one of these client library versions:
 
 - java-security >= 2.7.5
 - spring-xsuaa
@@ -15,21 +15,21 @@ So, Service/Application B can get rid of SAP_JWT_TRUST_ACL environment variable,
 - approuter >= 8.x
 - sap_xssec for Python >= 2.1.0 
 
-## Exercise 5.2 Fix Security Issue
+## Exercise 5.2 Fix security issue
 
-With introduction of Audience Validation as replacement for SAP_JWT_TRUST_ACL, bypassing trust is no longer accepted. That means in case you make use of wildcards ``*``, e.g.
+With introduction of Audience validation as replacement for ``SAP_JWT_TRUST_ACL`, bypassing trust is no longer accepted. If you are using the wildcards ``*``, e.g.
  ```yml
 env:
   SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]
 ```
 
- the next steps are mandatory.
+In that case the next steps are mandatory.
  
 ### Step 1 Grant scope(s) to calling app
 For a business application A that wants to call an application B, it's now mandatory that the application /service B grants at least one scope to the calling business application A. 
 You can grant scopes with the `xs-security.json` file. 
 
-#### Communication with User principal
+#### Communication with user principal
 ```
 "scopes": [
 	{
@@ -40,7 +40,7 @@ You can grant scopes with the `xs-security.json` file.
 ]
 ```
 
-#### Communication with User principal
+#### Communication without user principal
 ```
 "scopes": [
 	{
@@ -51,18 +51,18 @@ You can grant scopes with the `xs-security.json` file.
 ]
 ```
 
-For additional information, refer to the [Application Security Descriptor Configuration Syntax](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html), specifically the sections [referencing the application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_fm2_wsk_pdb) and [authorities](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_d1m_1nq_zy). 
+For additional information, refer to the [Application Security Descriptor Configuration Syntax](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html), in particular the sections [referencing the application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_fm2_wsk_pdb) and [authorities](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_d1m_1nq_zy). 
 
 ### Step 2 Accept scopes
-Furthermore, the application A must accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
+Furthermore, application A must accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
 
-#### Communication with User principal
+#### Communication with user principal
 ```
 "foreign-scope-references": ["$ACCEPT_GRANTED_SCOPES"],       
 ```
-You can limit the references to just those applications you want to accept. For example, `"foreign-scope-references": ["$XSAPPNAME(application,servb).Read"]`.
+You can limit the references to those applications you want to accept. For example, `"foreign-scope-references": ["$XSAPPNAME(application,servb).Read"]`.
 
-#### Communication without User principal
+#### Communication without user principal
 ```
 {
     "xsappname"     : "appa",
@@ -70,14 +70,14 @@ You can limit the references to just those applications you want to accept. For 
     "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
 }
 ```
-You can limit the references to just those applications you want to accept. For example, `"authorities":["$XSAPPNAME(application,servb).Create"]`.
+You can limit the references to those applications you want to accept. For example, `"authorities":["$XSAPPNAME(application,servb).Create"]`.
 
 ## Exercise 5.3 Re-deploy and test your application
 
-TODO
+To check whether your upgrade had no undesired side effects, deploy your application to Cloud Foundry and test.
 
 ## Summary
 
-Having done that, you do not longer need to manage your `SAP_JWT_TRUST_ACL` environment specific and you do not longer accept any token from foreign applications.
+Having done that, you do not longer need to manage your `SAP_JWT_TRUST_ACL` environment variable and you do not longer accept any token from foreign applications.
 
-Continue with the last exercise, [Exercise 6](/exercises/zone_enablement), in order to prepare your application for Zone-Enabled Subaccounts.
+Continue with the last exercise, [Exercise 6 - Prepare your application for new subaccounts](/exercises/ex6_tenantid), to prepare your application for new subaccounts.

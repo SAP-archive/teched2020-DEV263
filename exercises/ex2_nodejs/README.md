@@ -1,7 +1,7 @@
 # Exercise 2 - Check and upgrade Node.JS security libraries
 
 ## Exercise 2.1 Upgrade version
-When you are using one of the following client-libaries:
+When you are using one of the following client libraries:
 
 - *SAP container security api for Node.JS* [npm](https://www.npmjs.com/package/@sap/xssec) < 3.0.6
 
@@ -26,13 +26,13 @@ For example:
 
 ## Exercise 2.2 Deploy and test your application
 
-To check whether your upgrade had no undesired side-effects, deploy your application to Cloud Foundry and test.
+To check whether your upgrade had no undesired side effects, deploy your application to Cloud Foundry and test.
 
 ## Summary
 
 You've successfully upgraded the *container-security api for Node.js*.
 
-Continue with - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
+Continue with - [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL](/exercises/ex5_sap_jwt_trust_acl/README.md).
 
 ## Further references
 - [Authentication for Node.js Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4902b6e66cbd42648b5d9eaddc6a363d.html)

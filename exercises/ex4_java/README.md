@@ -1,20 +1,22 @@
-# Exercise 4 - Check and Upgrade Java Security Libraries
+# Exercise 4 - Check and upgrade Java/Spring security libraries
 
-> **Note** This is NOT relevant for applications that make use of Java Web security provided by SAP Java Buildpack (as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack)).
+> **Note** This is NOT relevant for applications that make use of Java Web Security provided by SAP Java Buildpack (as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack)).
 
 ## Exercise 4.1 Upgrade versions
-When you are using one of the following client-libaries:
+When you are using one of the following client libraries:
 
 - *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa) < 2.7.3
 - [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library [maven central](https://search.maven.org/search?q=g:com.sap.cloud.security) < 2.7.5
 
 Upgrade to the latest version.
 
-Consider [Release notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases)
+> Tip 1: get a list of all available versions on [maven central](https://search.maven.org/search?q=com.sap.cloud.security).
+
+> Tip 2: consider [release notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases).
 
 ## Exercise 4.2 Check usage of deprecated container-security api library
 
-The table below gives you an overview about the dependencies that needs to be replaced by the open-source version.
+The table below gives you an overview about the dependencies that must be replaced by the open-source version.
 
 groupId (deprecated) | artifactId (deprecated) | groupId | artifactId
 --- | --- | --- | --- 
@@ -32,13 +34,11 @@ com.sap.security.nw.sso.linuxx86_64.opt | sapjwt.linuxx86_64 | ./. | ./.
 com.sap.security.nw.sso.linuxppc64.opt | sapjwt.linuxppc64 | ./. | ./. 
 com.sap.security.nw.sso.darwinintel64.opt | sapjwt.darwinintel64 | ./. | ./. 
 
-In that case continue to [Exercise 4.2 Migrate java-container-security library](../java/migrationguides/README.md)
-
 ## Summary
 
-You've now upgraded the version or detected a dependency to the SAP internal *container-security api for Java*, which is deprecated and must be replaced.
+You've now upgraded the version. 
 
-Continue with - [SAP_JWT_TRUST_ACL](/exercises/sap_jwt_trust_acl/README.md)
+And, if you've detected a dependency to the SAP internal *container-security api for Java*, which is deprecated continue with [Exercise 4.3 - Migrate java-container-security library](/migrationguides/README.md).
 
 
 ## Further references

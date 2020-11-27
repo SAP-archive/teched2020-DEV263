@@ -26,7 +26,7 @@ Upgrade to the latest version.
 
 ## Exercise 1.3 Deploy and test your approuter
 
-To check whether your upgrade had no undesired side-effects, deploy your approuter to Cloud Foundry and test.
+To check whether your upgrade had no undesired side effects, deploy your approuter to Cloud Foundry and test.
 
 ## Summary
 
@@ -34,9 +34,9 @@ You've successfully upgraded the approuter version.
 
 Depending on the programming language, your application is written, upgrade or migrate your Cloud Foundry applications one after the other to the latest Security client library version.
 
-- [Exercise 2 Node.JS](/exercises/nodejs)
-- [Exercise 3 SAP Java Buildpack and XSA Java Buildpack](/exercises/sapjavabuildpack)
-- [Exercise 4 Java / Spring](/exercises/java)
+- [Exercise 2 - Check and upgrade Node.JS security libraries](/exercises/ex2_nodejs)
+- [Exercise 3 - Check and upgrade SAP Java Buildpack and XSA Java Buildpack](/exercises/ex3_sapjavabuildpack)
+- [Exercise 4 - Check and upgrade Java/Spring security libraries](/exercises/ex4_java)
 
 ## Further references
 - [Authentication for Node.js Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4902b6e66cbd42648b5d9eaddc6a363d.html)
