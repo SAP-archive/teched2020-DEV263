@@ -7,9 +7,9 @@ When you are using one of the following client libraries:
 
 Upgrade to the latest version.
 
-> Tip 1: get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/xssec versions`
+> :bulb: Get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/xssec versions`
 
-> Tip 2: consider the ``CHANGELOG.md`` in `node_modules/@sap/xssec`.
+> :bulb: Consider the ``CHANGELOG.md`` in `node_modules/@sap/xssec`.
 
 #### If you upgrade from version 2.x.x
 For most users, the @sap/xssec 3.x.x library is backward compatible to the 2.x.x versions. Especially if you use the documented methods only, you are safe.

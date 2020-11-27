@@ -10,9 +10,9 @@ When you are using one of the following client libraries:
 
 Upgrade to the latest version.
 
-> Tip 1: get a list of all available versions on [maven central](https://search.maven.org/search?q=com.sap.cloud.security).
+> :bulb: Get a list of all available versions on [maven central](https://search.maven.org/search?q=com.sap.cloud.security).
 
-> Tip 2: consider [release notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases).
+> :bulb: Consider [release notes](https://github.com/SAP/cloud-security-xsuaa-integration/releases).
 
 ## Exercise 4.2 Check usage of deprecated container-security api library
 
@@ -38,7 +38,7 @@ com.sap.security.nw.sso.darwinintel64.opt | sapjwt.darwinintel64 | ./. | ./.
 
 You've now upgraded the version. 
 
-And, if you've detected a dependency to the SAP internal *container-security api for Java*, which is deprecated continue with [Exercise 4.3 - Migrate java-container-security library](/migrationguides/README.md).
+And, if you've detected a dependency to the SAP internal *container-security api for Java*, which is deprecated continue with [Exercise 4.3 - Migrate java-container-security library](migrationguides/README.md).
 
 
 ## Further references

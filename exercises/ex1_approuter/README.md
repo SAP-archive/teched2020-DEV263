@@ -19,9 +19,9 @@ The approuter version can be found in the ``package.json``:
 ## Exercise 1.2 Upgrade version
 Upgrade to the latest version.
 
-> Tip 1: get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/approuter versions`.
+> :bulb: Get a list of all available versions in npm: `npm view --registry https://npm.sap.com @sap/approuter versions`.
 
-> Tip 2: consider the ``CHANGELOG.md`` in `node_modules/@sap/approuter`.
+> :bulb: Consider the ``CHANGELOG.md`` in `node_modules/@sap/approuter`.
 
 
 ## Exercise 1.3 Deploy and test your approuter

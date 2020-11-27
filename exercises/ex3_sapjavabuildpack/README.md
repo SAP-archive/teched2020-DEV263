@@ -7,7 +7,7 @@ As of **SAP Java Buildpack version 1.26.1** and as of **XSA Java Buildpack versi
 The SAP and XSA Java Buildpack no longer provide deprecated SAP-internal Security libraries and no longer depends on Spring Security / Jackson and Common Crypto Library.
 
 ## Exercise 3.1 Clean-up dependencies
-In general, the APIs are kept compatible. For this reason we do not expect any incompatibilities. We recommend that you update your `pom.xml` dependencies towards the open-source API in order to benefit from future API enhancements. For a step-by-step guide on how to replace your dependencies to the deprecated SAP-internal security libraries with the open-sourced ones, see [Migration Guide for J2EE Web Applications that use SAP Java Buildpack for securing their Applications](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md).
+In general, the APIs are kept compatible. For this reason we do not expect any incompatibilities. We recommend that you update your `pom.xml` dependencies towards the open-source API in order to benefit from future API enhancements. For a step-by-step guide on how to replace your dependencies to the deprecated SAP-internal security libraries with the open-sourced ones, see [Migration Guide for J2EE Web Applications that use SAP Java Buildpack for securing their Applications](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md), which is located in ``SAP/cloud-security-xsuaa-integration`` repository.
 
 
 ## Exercise 3.2 Leverage BOM

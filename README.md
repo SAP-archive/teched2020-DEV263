@@ -11,7 +11,7 @@ This session walks the attendees through the process of upgrading the client lib
 This course is mainly targeted to application developers that must be upgrade their existing application to be up-to-date and ready for upcoming features.
 
 ## Prerequisites
-Check whether you make use of one of these security libraries / versions.
+Check whether you make use of one of these libraries / versions to secure your application.
 
 #### Java development
 - SAP internal *container-security api for Java* which was provided with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
