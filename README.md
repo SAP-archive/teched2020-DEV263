@@ -47,9 +47,11 @@ The “uaa.user” scope and an additional roundtrip is not required anymore. Al
 > Please note that JWT bearer token response provides NO refresh_token. This is no incompatible change, as it was never exposed via the API.
  
 ### Changed API for multi-tenant applications to determine tenant identifier: getSubaccountId() replaced by getZoneId()
-In order to prepare for the possibility to decouple subaccount (metering) and the XSUAA tenant (zone id), we explicitly added `getZoneId()` next to `getSubaccountId()`.
- 
-For NEW SAP Cloud Platform subaccounts, it can no longer be guaranteed that “zone id” == “subaccount id” == “tenant guid”. That’s why you must make sure that you use the `getSubaccountId()` method provided that you need it for metering purposes (claim `ext_attr.subaccountid`). And that you use the `getZoneId()` method as tenant discriminator (claim `zid`).
+For SAP Cloud Platform based applications to participate in integration scenarios of the [Intelligent Enterprise](https://www.sap.com/documents/2020/02/520ea921-847d-0010-87a3-c30de2ffd8ff.html), the aspect of multi-tenancy must be decoupled from the aspects of subaccounts. Both aspects may have different IDs: The subaccount ID keeps identifying the subaccount. The new zone ID identifies the tenant for data isolation and identity and access management. Until further notice, actual subaccount and zone IDs remain identical. IDs will be different for newly created subaccounts.
+
+Multi-tenant applications need to adapt by using the zone ID instead of the subaccount ID as key for data isolation between tenants. For that purpose, the security client libraries offer a new ``getZoneId()`` method, reflecting claim zid in access tokens. Use this method instead of the existing ``getSubaccountId()`` method.
+
+In addition, commercialized multi-tenant applications with a need for metering and billing still need to use the existing ``getSubaccountId()`` method as identifier for the account to be billed. This reflects claim ``ext_attr.subaccountid`` in access tokens.
 
 
 ### Java-container-security Xsuaa client library is deprecated
@@ -71,8 +73,8 @@ As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.
 - [Exercise 2 - Check and upgrade Node.JS security libraries](exercises/ex2_nodejs)
 - [Exercise 3 - Check and upgrade SAP Java Buildpack and XSA Java Buildpack](exercises/ex3_sapjavabuildpack)
 - [Exercise 4 - Check and upgrade Java/Spring security libraries](exercises/ex4_java)
-- [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL](exercises/ex5_sap_jwt_trust_acl)
-- [Exercise 6 - Prepare your application for new subaccounts](exercises/ex6_tenantid)
+- [Exercise 5 - Follow-up tasks due to deprecation of SAP_JWT_TRUST_ACL](exercises/ex5_sap_jwt_trust_acl)
+- [Exercise 6 - Prepare your multi-tenant application for new subaccounts](exercises/ex6_tenantid)
 
 
 ## How to obtain support

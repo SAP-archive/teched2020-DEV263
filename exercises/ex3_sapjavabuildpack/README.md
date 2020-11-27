@@ -23,7 +23,7 @@ To check whether your upgrade had no undesired side effects, deploy your applica
 
 You've successfully removed the dependency to the SAP internal *container-security api for Java*, which is deprecated and you have successfully replaced it with the open-source security client library, which is available on maven central.
 
-Continue with - [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL](../ex5_sap_jwt_trust_acl/README.md)
+Continue with - [Exercise 5 - Follow-up tasks due to deprecation of SAP_JWT_TRUST_ACL](../ex5_sap_jwt_trust_acl/README.md)
 
 Or
 

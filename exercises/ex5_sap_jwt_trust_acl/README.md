@@ -1,4 +1,4 @@
-# Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL
+# Exercise 5 - Follow-up tasks due to deprecation of SAP_JWT_TRUST_ACL
 
 This exercise is only relevant for communications between applications and/or services.
 
@@ -80,4 +80,4 @@ To check whether your upgrade had no undesired side effects, deploy your applica
 
 Having done that, you do not longer need to manage your `SAP_JWT_TRUST_ACL` environment variable and you do not longer accept any token from foreign applications.
 
-Continue with the last exercise, [Exercise 6 - Prepare your application for new subaccounts](/exercises/ex6_tenantid), to prepare your application for new subaccounts.
+Continue with the last exercise, [Exercise 6 - Prepare your multi-tenant application for new subaccounts](/exercises/ex6_tenantid), to prepare your application for new subaccounts.

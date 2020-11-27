@@ -32,7 +32,7 @@ To check whether your upgrade had no undesired side effects, deploy your applica
 
 You've successfully upgraded the *container-security api for Node.js*.
 
-Continue with - [Exercise 5 - Follow up tasks due to deprecation of SAP_JWT_TRUST_ACL](/exercises/ex5_sap_jwt_trust_acl/README.md).
+Continue with - [Exercise 5 - Follow-up tasks due to deprecation of SAP_JWT_TRUST_ACL](/exercises/ex5_sap_jwt_trust_acl/README.md).
 
 ## Further references
 - [Authentication for Node.js Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4902b6e66cbd42648b5d9eaddc6a363d.html)
