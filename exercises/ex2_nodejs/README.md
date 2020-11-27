@@ -3,7 +3,7 @@
 ## Exercise 2.1 Upgrade version
 When you are using one of the following client libraries:
 
-- *SAP container security api for Node.JS* [npm](https://www.npmjs.com/package/@sap/xssec) < 3.0.6
+- *SAP container security api for Node.JS* ([npm](https://www.npmjs.com/package/@sap/xssec)) < 3.0.6
 
 Upgrade to the latest version.
 
