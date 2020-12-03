@@ -7,7 +7,7 @@ As of **SAP Java Buildpack version 1.26.1** and as of **XSA Java Buildpack versi
 The SAP and XSA Java Buildpack no longer provide deprecated SAP-internal Security libraries and no longer depends on Spring Security / Jackson and Common Crypto Library.
 
 ## Exercise 3.1 Clean-up dependencies
-In general, the APIs are kept compatible. For this reason we do not expect any incompatibilities. We recommend that you update your `pom.xml` dependencies towards the open-source API in order to benefit from future API enhancements. For a step-by-step guide on how to replace your dependencies to the deprecated SAP-internal security libraries with the open-sourced ones, see [Migration Guide for J2EE Web Applications that use SAP Buildpack for securing their Applications](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md), which is located in ``SAP/cloud-security-xsuaa-integration`` repository.
+In general, the APIs are kept compatible. For this reason we do not expect any incompatibilities. We recommend that you update your `pom.xml` dependencies towards the open-source API in order to benefit from future API enhancements. For a step-by-step guide on how to replace your dependencies to the deprecated SAP-internal security libraries with the open-sourced ones, see [Migration Guide for J2EE Web Applications that use SAP Buildpack for securing their Applications](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects.md) which is located in ``SAP/cloud-security-xsuaa-integration`` repository.
 
 
 ## Exercise 3.2 Leverage BOM
@@ -23,7 +23,8 @@ To check whether your upgrade had no undesired side effects, deploy your applica
 
 You've successfully removed the dependency to the SAP internal *container-security api for Java*, which is deprecated and you have successfully replaced it with the open-source security client library, which is available on maven central.
 
-[OPTIONAL] Continue with - [Migration Guide for J2EE Web Applications that use SAP Buildpack for securing their applications - API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md).
+Optionally continue with - [Migration Guide for J2EE Web Applications that use SAP Buildpack for securing their applications - API Version 2](https://github.com/SAP/cloud-security-xsuaa-integration/blob/master/java-security/Migration_SAPJavaBuildpackProjects_V2.md) which is located in SAP/cloud-security-xsuaa-integration repository.
+
 
 Or
 
