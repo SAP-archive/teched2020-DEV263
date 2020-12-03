@@ -66,7 +66,8 @@ As of SAP Java Buildpack version 1.26. and as of XSA Java Buildpack version 1.8.
 
 [SAP Java Buildpack, Version 1.26.1 - Release note, 2 July 2020](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2020-07-02&to=2020-07-02)  
 [SAP HANA Platform SPS 03 Release note](https://launchpad.support.sap.com/#/notes/2551355)  
-[SAP HANA Platform SPS 04 Release note](https://launchpad.support.sap.com/#/notes/2656575)  
+[SAP HANA Platform SPS 04 Release note](https://launchpad.support.sap.com/#/notes/2656575)
+[SAP HANA XS Advanced 1.0.129 Release note - Introduction of Open-Source Java Security Client Library](https://launchpad.support.sap.com/#/notes/3000200)
 
 
 ## Exercises
