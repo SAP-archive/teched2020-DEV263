@@ -17,7 +17,7 @@ So, Service/application B can get rid of ``SAP_JWT_TRUST_ACL`` environment varia
 
 ## Exercise 5.2 Fix security issue
 
-With introduction of Audience validation as replacement for ``SAP_JWT_TRUST_ACL`, bypassing trust is no longer accepted. If you are using the wildcards ``*``, e.g.
+With introduction of Audience validation as replacement for ``SAP_JWT_TRUST_ACL``, bypassing trust is no longer accepted. If you are using the wildcards ``*``, e.g.
  ```yml
 env:
   SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]
