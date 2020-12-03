@@ -14,7 +14,7 @@ This course is mainly targeted to application developers that must be upgrade th
 Check whether you make use of one of these libraries / versions to secure your application.
 
 #### Java development
-- SAP internal *container-security api for Java* which was provided for example with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
+- *container-security api for Java*, which was provided for example with [XS_JAVA 2.0.05](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.05/en-US/6511bc054b0e48369a625a8019fefd53.html)
 - *Java* [*token-client*](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) library ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.security.xsuaa)) < 2.7.3
 - [*java-security*](https://github.wdf.sap.corp/CPSecurity/java-container-security) library ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.security)) < 2.7.5
 - *xs-user-holder* ([maven central](https://search.maven.org/search?q=g:com.sap.cloud.sjb)) < 1.17.5
@@ -53,6 +53,7 @@ Multi-tenant applications need to adapt by using the zone ID instead of the suba
 
 In addition, commercialized multi-tenant applications with a need for metering and billing still need to use the existing ``getSubaccountId()`` method as identifier for the account to be billed. This reflects claim ``ext_attr.subaccountid`` in access tokens.
 
+[blogs.sap.com](https://blogs.sap.com/2020/12/02/changed-api-for-multitenant-apps-to-get-tenant-identifier-getzoneid-replaces-getsubaccountid/)
 
 ### Java-container-security Xsuaa client library is deprecated
 As of begin of July, SAP-internal java-container-security library is deprecated. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/ex4_java/migrationguides).
