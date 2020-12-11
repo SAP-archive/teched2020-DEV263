@@ -54,7 +54,7 @@ You can grant scopes with the `xs-security.json` file.
 For additional information, refer to the [Application Security Descriptor Configuration Syntax](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html), in particular the sections [referencing the application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_fm2_wsk_pdb) and [authorities](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/517895a9612241259d6941dbf9ad81cb.html#loio517895a9612241259d6941dbf9ad81cb__section_d1m_1nq_zy). 
 
 ### Step 2 Accept scopes
-Furthermore, application A must accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor xs-security.json file.
+Furthermore, application A must accept these granted scopes /authorities in the authorities section of the xs-security.json. The configuration is done as part of the application security descriptor `xs-security.json` file.
 
 #### Communication with user principal
 ```
