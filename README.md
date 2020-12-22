@@ -1,5 +1,7 @@
 # DEV263 - Secure Cloud Applications by Default – Assisted Migration
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2020-DEV263)](https://api.reuse.software/info/github.com/SAP-samples/teched2020-DEV263)
+
 ## Description
 
 This repository contains the material for the SAP TechEd 2020 session called DEV263 - Secure Cloud Applications by Default. 
