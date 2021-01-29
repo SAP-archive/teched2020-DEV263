@@ -56,6 +56,7 @@ Multi-tenant applications need to adapt by using the zone ID instead of the suba
 In addition, commercialized multi-tenant applications with a need for metering and billing still need to use the existing ``getSubaccountId()`` method as identifier for the account to be billed. This reflects claim ``ext_attr.subaccountid`` in access tokens.
 
 [blogs.sap.com](https://blogs.sap.com/2020/12/02/changed-api-for-multitenant-apps-to-get-tenant-identifier-getzoneid-replaces-getsubaccountid/)
+[Release note, December 3rd 2020](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Authorization%20and%20Trust%20Management)
 
 ### Java-container-security Xsuaa client library is deprecated
 As of begin of July, SAP-internal java-container-security library is deprecated. We recommend that you replace Spring (Boot) based applications with spring-xsuaa. SAP Java Buildpack is the recommendation for J2EE applications and java-security is the library to use for token-validation for native Java applications. You can find more details and the migration guides linked [here](exercises/ex4_java/migrationguides).
