@@ -22,7 +22,7 @@ If you like to have a smooth migration experience and like to stick to the Sprin
 Recommended replacement for Java native applications is [java-security](https://github.com/SAP/cloud-security-xsuaa-integration).
 
 ### Recommended replacement for J2EE applications
-For J2EE applications, the recommended replacement would be the SAP Java Buildpack` or `XSA Java Buildpack`, which integrate Servlet Security into the tomcat server as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack).
+For J2EE applications, the recommended replacement would be the `SAP Java Buildpack` or `XSA Java Buildpack`, which integrate Servlet Security into the tomcat server as described [here](https://github.com/SAP/cloud-security-xsuaa-integration#token-validation-for-java-web-applications-using-sap-java-buildpack).
 
 ## Exercise 4.3.2 Deploy and test your application
 
