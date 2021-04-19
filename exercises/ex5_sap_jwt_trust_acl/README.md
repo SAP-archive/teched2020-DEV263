@@ -62,6 +62,24 @@ Furthermore, application A must accept these granted scopes /authorities in the 
 ```
 You can limit the references to those applications you want to accept. For example, `"foreign-scope-references": ["$XSAPPNAME(application,servb).Read"]`.
 
+Furthermore, ensure that the application user has a role collection assigned that contains the role (based on the role template) with the required scope "$XSAPPNAME(application,servb).Read"]:
+
+```json
+  "role-templates": [
+     ...
+ 
+    {
+      "name": "BusinessUser",
+      "description": "Role Template for the Business User",
+      "scope-references": [
+        "uaa.user",
+        "$XSAPPNAME(application,servb).Read"
+      ]
+    },
+    ...
+]
+```
+
 #### Communication without user principal
 ```
 {
