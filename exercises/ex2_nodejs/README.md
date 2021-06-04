@@ -14,7 +14,7 @@ Upgrade to the latest version.
 #### If you upgrade from version 2.x.x
 For most users, the @sap/xssec 3.x.x library is backward compatible to the 2.x.x versions. Especially if you use the documented methods only, you are safe.
 
-But if you directly use member attributes of the so called `SecurityContext` and you do not get them using ``getter` function, you must be aware of the fact that these attributes are now "private" and only available using the documented getter method.
+But if you directly use member attributes of the so called `SecurityContext` and you do not get them using `getter` function, you must be aware of the fact that these attributes are now "private" and only available using the documented getter method.
 
 For example:
 ```js
